@@ -185,7 +185,8 @@
                                 html += '<td>' + record.country + '</td>';
                                 html += '<td>' + record.phone + '</td>';
                                 html += '<td>' + (record.isActive ? 'Yes' : 'No') + '</td>';
-                                html += '<td>' + record.image + '</td>';
+                                html += '<td><img src="' + record.image + '" class="img-thumbnail" alt="Image"></td>';
+
 
                                 html += '</tr>';
                             });
@@ -216,6 +217,8 @@
                         if (response) {
                             var html = '<table class="table-custom">';
                             html += '<tr><th>ID</th><td>' + response.id + '</td></tr>';
+                            html += '<tr><th>Picture</th><td><img class="img-thumbnail" alt="Image" src="' + response.image + '"></td></tr>';
+
                             html += '<tr><th>First Name</th><td>' + response.fistName + '</td></tr>';
                             html += '<tr><th>Last Name</th><td>' + response.lastName + '</td></tr>';
                             html += '<tr><th>Gender</th><td>' + response.gender + '</td></tr>';
